@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 9900;
 const mongo = require('mongodb');
-const mongoClient = mongo.mongoClient;
-const mongodbUrl = "mongodb://localhost:27017";
+const mongoclient = mongo.MongoClient;
+const mongodbUrl = "mongodb+srv://Vinay:Vinay@551888@cluster0.wx4mi.mongodb.net/test";
 // connecting mongo server
-mongoClient.connect(mongodbUrl, (err,connection) =>{
+mongoclient.connect(mongodbUrl, (err,connection) =>{
 
     if(err){
         console.log(err);
@@ -37,7 +37,7 @@ app.get('/city',(req,res)=>{
         if(err) throw err;
         res.send(result);
       })
-    res.send(city);
+    
 })
 
 //connecting server

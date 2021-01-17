@@ -1,0 +1,6 @@
+git clone https://github.com/edureka-intership/assignment-1-vinaykumarb2424.git
+1. git add .
+2.git status
+3. git commit -m "Submitted"
+4. git push
+5. same for updation

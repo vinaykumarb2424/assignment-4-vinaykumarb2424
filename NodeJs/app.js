@@ -2,6 +2,11 @@ const { ok } = require('assert');
 const express = require('express');
 const app = express();
 const port = 9900;
+const bodyParser =require('body-parser');
+const cors =require('cors');
+app.use(cors());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 const mongo = require('mongodb');
 const { send } = require('process');
 const mongoclient = mongo.MongoClient;
@@ -22,7 +27,7 @@ let db;
 
 //health ok
 app.get('/', (a,b) =>{
-    b.send("okkkdkds");
+    b.send("okkkdkdhs");
 })
 
 
